@@ -2,9 +2,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+if (!process.env.MONGO_URI) {
+  throw new Error("MONGO_URI environment variable is not set");
+}
+
 export const env = {
   port: Number(process.env.PORT || 5001),
-  mongoUri: process.env.MONGO_URI || "mongodb://127.0.0.1:27017/converso",
+  mongoUri: process.env.MONGO_URI,
   jwtSecret: process.env.JWT_SECRET || "change-me",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
   clientUrl: process.env.CLIENT_URL || "http://localhost:5174",
