@@ -17,6 +17,9 @@ const __dirname = path.dirname(__filename);
 
 export function createApp() {
   const app = express();
+  
+  // Trust the proxy since we are deployed on a cloud provider like Railway
+  app.set("trust proxy", 1);
 
   app.use(
     cors({
