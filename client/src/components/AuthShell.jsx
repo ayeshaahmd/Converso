@@ -4,18 +4,24 @@ import { languages } from "../data/languages";
 import { startAmbientSoundtrack } from "../utils/audio";
 
 const greetings = [
-  "Hello",
-  "Hola",
-  "Bonjour",
-  "سلام",
-  "Ciao",
-  "नमस्ते",
-  "你好",
-  "Ola",
-  "Hallo",
-  "Merhaba",
-  "Hej",
-  "Привет",
+  "Hello", // English
+  "Hola", // Spanish
+  "Bonjour", // French
+  "Hallo", // German
+  "Ciao", // Italian
+  "Olá", // Portuguese
+  "Hoi", // Dutch
+  "Cześć", // Polish
+  "سلام", // Urdu
+  "नमस्ते", // Hindi
+  "مرحبا", // Arabic
+  "你好", // Chinese
+  "こんにちは", // Japanese
+  "안녕하세요", // Korean
+  "হ্যালো", // Bengali
+  "Merhaba", // Turkish
+  "Halo", // Indonesian
+  "Привет", // Russian
 ];
 
 const teachTranslations = [
