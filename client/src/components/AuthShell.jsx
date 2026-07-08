@@ -538,7 +538,7 @@ export function AuthShell({
                         <option
                           key={language.value}
                           value={language.value}
-                          className="bg-slate-900"
+                          className="bg-slate-900 text-white"
                         >
                           {language.label}
                         </option>
@@ -710,33 +710,15 @@ Understand, learn, and connect without barriers.
                 onChange={onChange}
                 style={{ textAlignLast: "center" }}
               >
-                <option value="en" className="bg-slate-900">
-                  English (EN)
-                </option>
-                <option value="es" className="bg-slate-900">
-                  Spanish (ES)
-                </option>
-                <option value="fr" className="bg-slate-900">
-                  French (FR)
-                </option>
-                <option value="ar" className="bg-slate-900">
-                  Arabic (AR)
-                </option>
-                <option value="ur" className="bg-slate-900">
-                  Urdu (UR)
-                </option>
-                <option value="hi" className="bg-slate-900">
-                  Hindi (HI)
-                </option>
-                <option value="zh" className="bg-slate-900">
-                  Chinese (ZH)
-                </option>
-                <option value="ja" className="bg-slate-900">
-                  Japanese (JA)
-                </option>
-                <option value="ko" className="bg-slate-900">
-                  Korean (KO)
-                </option>
+                {languages.map((language) => (
+                  <option
+                    key={language.value}
+                    value={language.value}
+                    className="bg-slate-900 text-white"
+                  >
+                    {language.label}
+                  </option>
+                ))}
               </select>
             )}
             {isRegister && (
@@ -829,3 +811,4 @@ Understand, learn, and connect without barriers.
     </div>
   );
 }
+
